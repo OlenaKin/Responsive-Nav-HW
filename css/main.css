@@ -1,1 +1,232 @@
-*{padding:0;margin:0}*,*::after,*::before{box-sizing:border-box}button{cursor:pointer}button,input,select,textarea{font-family:inherit}
+* {
+  padding: 0;
+  margin: 0;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+header {
+  position: fixed;
+  left: 12%;
+  width: 88%;
+  margin-left: auto;
+  height: 80px;
+  margin-right: 10px;
+  top: 5px;
+  border-radius: 10px;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+}
+header nav {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+header nav .nav__list-left,
+header nav .nav__list-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.3rem;
+}
+header nav .nav__list-left li,
+header nav .nav__list-right li {
+  list-style: none;
+}
+
+@media (max-width: 576px) {
+  aside {
+    max-width: 86px;
+  }
+  header {
+    top: 0;
+    height: 90%;
+    box-shadow: none;
+  }
+  nav {
+    font-size: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 15%;
+  }
+  nav .nav__list-left,
+  nav .nav__list-right {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  nav .nav__list-left li,
+  nav .nav__list-right li {
+    width: 100%;
+    text-align: left;
+  }
+}
+aside {
+  margin: 0 5px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 220px;
+  padding: 0;
+  width: 100%;
+}
+aside a {
+  text-decoration: none;
+}
+aside .button {
+  display: none;
+}
+aside .divider {
+  margin: 10px 0 5px 10px;
+}
+aside .aside__nav {
+  text-align: start;
+  font-size: 14px;
+  width: 100%;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+}
+aside .aside__nav h1, aside .aside__nav h2, aside .aside__nav h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-left: 1rem;
+  margin-top: 10px 0 5px 10px;
+  color: #828282;
+}
+aside .aside__nav p {
+  font-size: 16px;
+  vertical-align: middle;
+}
+aside .aside__nav img {
+  margin-right: 10px;
+}
+aside .aside__nav button,
+aside .aside__nav .aside__nav__arrow-label img,
+aside .aside__nav .aside-nav__logo-link img {
+  padding: 0;
+  margin-bottom: 25px;
+}
+aside .aside__nav .aside__nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  white-space: nowrap;
+}
+aside .aside__nav .aside__nav-list .dashboard {
+  margin-bottom: 20px;
+}
+aside .aside__nav .aside__nav-list .aside__nav-listItem {
+  white-space: nowrap;
+  padding: 7px 15px;
+  height: 46px;
+}
+aside .aside__nav .aside__nav-list .aside__nav-listItem ~ *:hover {
+  background-color: #9E8CFC;
+}
+aside .aside__nav .aside__nav-list .aside__nav-listItem img {
+  vertical-align: middle;
+}
+aside .aside__nav .aside__nav-list .aside__nav-listItem p {
+  vertical-align: middle;
+}
+aside .aside__nav .aside__nav-list .aside__nav-listItem a {
+  text-decoration: none;
+}
+
+.button:checked ~ aside .arrow-open {
+  display: none;
+}
+
+.button:checked ~ .aside__nav-list, .aside__nav-listItem {
+  height: 46px;
+  width: 100%;
+}
+
+.button:checked ~ img,
+a,
+p {
+  display: inline-block;
+  padding: 0;
+}
+
+.button:checked ~ .aside__nav .divider {
+  display: none;
+}
+.button:checked ~ .aside__nav .arrow-open {
+  display: none;
+}
+.button:checked ~ .aside__nav .dashboard img {
+  margin-bottom: 20px;
+}
+.button:checked ~ .aside__nav .aside__nav-listItem {
+  width: 220px;
+  display: inline-block;
+}
+.button:checked ~ .aside__nav .aside__nav-listItem :hover {
+  background-color: #9E8CFC;
+}
+.button:checked ~ .aside__nav p {
+  visibility: visible;
+  display: inline-block;
+}
+
+.button:not(:checked) ~ .aside__nav {
+  width: 86px;
+  margin: 0;
+}
+.button:not(:checked) ~ .aside__nav p,
+.button:not(:checked) ~ .aside__nav h1,
+.button:not(:checked) ~ .aside__nav h2,
+.button:not(:checked) ~ .aside__nav h3,
+.button:not(:checked) ~ .aside__nav .logo-name,
+.button:not(:checked) ~ .aside__nav .arrow-close {
+  display: none;
+}
+.button:not(:checked) ~ .aside__nav .divider {
+  display: block;
+}
+.button:not(:checked) ~ .aside__nav .aside__nav-listItem {
+  width: 100%;
+  height: 46px;
+}
+.button:not(:checked) ~ .aside__nav .aside__nav-listItem:hover {
+  background-color: #9E8CFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.logo {
+  margin-top: 0.5rem;
+}
+
+p {
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=main.css.map */
